@@ -4,7 +4,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Digite o combustível atual do avião e a distância que ele percorrerá para iniciarmos a simulação! Formato: {combustivel} {distancia}");
         Aviao obj = new Aviao(input.nextDouble(), input.nextDouble());
-    
         Thread.sleep(1000);
         System.out.println("Avião preparando para decolar!");
         Thread.sleep(1000);
