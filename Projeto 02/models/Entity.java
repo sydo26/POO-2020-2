@@ -1,7 +1,5 @@
 package models;
 
-import java.util.Random;
-
 public class Entity implements Runnable {
 
     private Thread attackingThread;
