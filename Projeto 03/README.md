@@ -19,3 +19,4 @@
 
 ## Demonstração
 [![Demonstração](https://github.com/sydo26/POO-2020-2/raw/main/Projeto%2003/capturas/demonstration.gif)](https://github.com/sydo26/POO-2020-2/raw/main/Projeto%2003/capturas/demonstration.mp4)
+Esta é apenas uma demonstração, e por ter sido passado para gif perdeu qualidade e frames. Clique no gif para baixar o vídeo original.
