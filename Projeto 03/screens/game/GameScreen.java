@@ -24,6 +24,7 @@ public class GameScreen {
         this.frame.getContentPane().add(this.graphics);
         this.frame.pack();
         this.frame.setLocationRelativeTo(null);
+        this.frame.setAlwaysOnTop(true);
         this.frame.setVisible(true);
     }
 

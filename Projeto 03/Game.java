@@ -20,6 +20,11 @@ public class Game implements GameListeners {
     }
 
     @Override
+    public String playerNickName() {
+        return this.player.getNickname();
+    }
+
+    @Override
     public void upBooster() {
         this.pointBooster *= 2;
     }

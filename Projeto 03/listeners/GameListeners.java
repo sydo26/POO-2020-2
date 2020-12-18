@@ -6,4 +6,5 @@ public interface GameListeners {
     public void removePoints(int value);
     public void upBooster();
     public int getBooster();
+    public String playerNickName();
 }

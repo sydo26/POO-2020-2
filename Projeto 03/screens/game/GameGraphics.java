@@ -161,7 +161,8 @@ public class GameGraphics extends JComponent {
             comp.draw(g);
         }
 
-        g.drawString("FPS: " + this.finalFps, 30, 30);
+        g.drawString("Olá, " + this.listener.playerNickName(), 30, 30);
+        g.drawString("FPS: " + this.finalFps, 30, 60);
         g.setColor(Color.YELLOW);
         g.drawString("Points: " + this.listener.getPoints(), 30, 640);
         g.drawString(this.listener.getBooster() * 2 + " pontos a cada 1 frame em que você segura o botão.", 30, 670);
