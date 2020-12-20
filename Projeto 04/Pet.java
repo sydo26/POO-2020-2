@@ -160,23 +160,30 @@ public class Pet {
         }
 
         this.setEnergy(this.getEnergy() - 1);
-        this.setHungry(this.getHungry() + 4);
+        this.setHungry(this.getHungryMax());
         this.setClean(this.getClean() - 2);
         this.setAge(this.getAge() + 1);
 
-        if(this.verifyAlive()) {
-            System.out.println(this.deadMessage);
-        }
+        
     }
 
     public void sleep() {
+        if(!this.isAlive()) {
+            System.out.println("fail: pet está morto");
+            return;
+        }
+
         if(this.getEnergy() > 15) {
             System.out.println("fail: não está com sono");
             return;
         }
-        
+
         this.setAge(this.getAge() + (this.getEnergyMax() - this.getEnergy()));
         this.setEnergy(this.getEnergyMax());
+
+        if(this.verifyAlive()) {
+            System.out.println(this.deadMessage);
+        }
     }
 
     public void show() {

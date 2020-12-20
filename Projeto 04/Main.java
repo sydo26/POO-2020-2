@@ -60,12 +60,12 @@ public class Main {
 
                 case "$eat": execute(pet, "eat"); break;
 
-                case "$clean": execute(pet, "clean"); break;
+                case "$clean": execute(pet, "shower"); break;
 
                 case "$sleep": execute(pet, "sleep"); break;
 
                 default: 
-                    if(command != "") {
+                    if(!command.equals("")) {
                         System.out.println("Comando inexistente!");
                     }
                     break;
