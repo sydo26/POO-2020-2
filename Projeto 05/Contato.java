@@ -19,8 +19,8 @@ public class Contato {
 
     public void addFone(String label, String number) {
         String alloweds = "().0123456789";
-        for(char c : alloweds.toCharArray()) {
-            if(number.indexOf(c) < 0) {
+        for(char c : number.toCharArray()) {
+            if(alloweds.indexOf(c) < 0) {
                 System.out.println("fail: fone inválido");
                 return;
             }
