@@ -79,7 +79,7 @@ public class BlockBreak extends GameComponent {
             this.pressedAnimation = true;
             this.color = new Color(250, 100, 20);
             this.pressedAnimationFrames--;
-            for(int i = 0; i < 20; i++) {
+            for(int i = 0; i < 100; i++) {
                 this.blocks.add(new MiniBlocks(new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)),
             this.x + (this.width/2), this.y + (this.height/2), (new Random()).nextInt(20 + 20)-20, (new Random()).nextInt(20 + 20)-20));
             } 
