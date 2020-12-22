@@ -5,3 +5,4 @@
 - [Projeto 03](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2003) ### (Um jogo sem sentido)
 - [Projeto 04](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2004) ### (Projeto [@006 Tamagotchi](https://github.com/qxcodepoo/arcade/tree/master/base/006))
 - [Projeto 05](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2005) ### (Projeto [@014 Contato](https://github.com/qxcodepoo/arcade/tree/master/base/014))
+- [Projeto 06](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2006) ### (Um canhão que atira pro nada)
