@@ -4,15 +4,27 @@ import java.util.List;
 public class Contato {
 
     private String name;
-    private List<Fone> fones = new ArrayList<>();
+    private List<Fone> fones;
+    private boolean starred;
 
     public Contato(String id) {
         this.name = id;
+        this.fones = new ArrayList<>();
+        this.starred = false;
     }
 
     public Contato(String id, List<Fone> fones) {
         this.name = id;
         this.fones = fones;
+        this.starred = false;
+    }
+
+    public boolean isStarred() {
+        return starred;
+    }
+
+    public void setStarred(boolean starred) {
+        this.starred = starred;
     }
 
     public String getName() {
@@ -24,8 +36,14 @@ public class Contato {
     }
 
     public void addFone(String label, String number) {
-        if (Fone.isValid(number))
-            this.fones.add(new Fone(label, number));
+        String alloweds = "().0123456789";
+        for (char c : number.toCharArray()) {
+            if (alloweds.indexOf(c) < 0) {
+                System.out.println("fail: fone inválido");
+                return;
+            }
+        }
+        this.fones.add(new Fone(label, number));
     }
 
     public void addFones(List<Fone> fones) {

@@ -6,10 +6,6 @@ public class Agenda {
 
   private List<Contato> contatos;
 
-  public Agenda() {
-    this.contatos = new ArrayList<>();
-  }
-
   public void addContato(String name, List<Fone> fones) {
     for (int i = 0; i < contatos.size(); i++) {
       if (contatos.get(i).getName().equalsIgnoreCase(name)) {
@@ -70,6 +66,10 @@ public class Agenda {
     }
 
     return false;
+  }
+
+  public Agenda() {
+    this.contatos = new ArrayList<>();
   }
 
   public List<Contato> search(String pattern) {
