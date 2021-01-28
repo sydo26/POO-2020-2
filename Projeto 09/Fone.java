@@ -15,10 +15,15 @@ public class Fone {
         return number;
     }
 
-    public boolean isValid(String number) {
-        return this.number.equalsIgnoreCase(number);
+    public static boolean isValid(String number) {
+        String alloweds = "().0123456789";
+        for (char c : number.toCharArray()) {
+            if (alloweds.indexOf(c) < 0)
+                return false;
+        }
+        return true;
     }
-    
+
     public String toString() {
         return this.getLabel() + ":" + this.getNumber();
     }

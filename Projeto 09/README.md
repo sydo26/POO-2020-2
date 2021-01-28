@@ -2,7 +2,7 @@
 
 ## O que eu fiz?
 
-- A sugestão [@015 Busca](https://github.com/qxcodepoo/arcade/tree/master/base/015)
+- A sugestão [@016 Favoritos](https://github.com/qxcodepoo/arcade/tree/master/base/016)
 
 ## Com quem eu fiz?
 
@@ -18,4 +18,4 @@
 
 ## Quanto tempo levou?
 
-- 20-40 min
+- 10-20 min

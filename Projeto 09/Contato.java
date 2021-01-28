@@ -36,14 +36,8 @@ public class Contato {
     }
 
     public void addFone(String label, String number) {
-        String alloweds = "().0123456789";
-        for (char c : number.toCharArray()) {
-            if (alloweds.indexOf(c) < 0) {
-                System.out.println("fail: fone inválido");
-                return;
-            }
-        }
-        this.fones.add(new Fone(label, number));
+        if (Fone.isValid(number))
+            this.fones.add(new Fone(label, number));
     }
 
     public void addFones(List<Fone> fones) {
@@ -74,6 +68,6 @@ public class Contato {
     }
 
     public String toString() {
-        return "- " + this.getName() + " " + getFonesList();
+        return (isStarred() ? "@" : "-") + " " + this.getName() + " " + getFonesList();
     }
 }

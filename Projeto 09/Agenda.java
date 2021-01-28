@@ -1,55 +1,84 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Agenda {
 
-  private List<Contato> contatos;
+  private Map<String, Contato> contatos;
 
-  public void addContato(String name, List<Fone> fones) {
-    for (int i = 0; i < contatos.size(); i++) {
-      if (contatos.get(i).getName().equalsIgnoreCase(name)) {
-        this.contatos.get(i).addFones(fones);
-        return;
-      }
-    }
-
-    this.contatos.add(new Contato(name, fones));
+  public Agenda() {
+    this.contatos = new TreeMap<>();
   }
 
-  public void show(List<Contato> listContato) {
+  public void addContato(String name, List<Fone> fones) {
+    name = name.toLowerCase();
+    if (contatos.containsKey(name)) {
+      contatos.get(name).addFones(fones);
+      return;
+    }
 
-    Collections.sort(listContato, (c1, c2) -> c1.getName().compareToIgnoreCase(c2.getName()));
+    contatos.put(name, new Contato(name, fones));
+  }
+
+  public void show(Map<String, Contato> mapContato) {
 
     StringBuilder builder = new StringBuilder();
-    for (Contato contato : listContato) {
-      builder.append("- " + contato.getName());
-      for (int i = 0; i < contato.getFones().size(); i++) {
-        builder.append(" [" + i + ":" + contato.getFones().get(i).toString() + "]");
-      }
-      builder.append("\n");
+    for (Map.Entry<String, Contato> contato : mapContato.entrySet()) {
+      builder.append(contato.getValue().toString()).append("\n");
     }
 
     System.out.println(builder.toString());
   }
 
-  public List<Contato> getContatos() {
+  public Map<String, Contato> getStarreds() {
+    Map<String, Contato> mapTemp = new TreeMap<>();
+    for (Map.Entry<String, Contato> contato : contatos.entrySet()) {
+      if (contato.getValue().isStarred()) {
+        mapTemp.put(contato.getKey(), contato.getValue());
+      }
+    }
+
+    return mapTemp;
+  }
+
+  public boolean starContato(String name) {
+    name = name.toLowerCase();
+    if (this.contatos.containsKey(name)) {
+      this.contatos.get(name).setStarred(true);
+      return true;
+    }
+
+    return false;
+  }
+
+  public boolean unStarContato(String name) {
+    name = name.toLowerCase();
+    if (this.contatos.containsKey(name)) {
+      this.contatos.get(name).setStarred(false);
+      return true;
+    }
+
+    return false;
+  }
+
+  public Map<String, Contato> getContatos() {
     return contatos;
   }
 
   public Contato getContato(String name) {
-    for (Contato contato : contatos) {
-      if (contato.getName().equalsIgnoreCase(name)) {
-        return contato;
+    for (Map.Entry<String, Contato> contato : contatos.entrySet()) {
+      if (contato.getKey().equalsIgnoreCase(name)) {
+        return contato.getValue();
       }
     }
+
     return null;
   }
 
   public boolean rmContato(String name) {
-    for (int i = 0; i < contatos.size(); i++) {
-      if (contatos.get(i).getName().equalsIgnoreCase(name)) {
-        this.contatos.remove(contatos.get(i));
+    for (Map.Entry<String, Contato> contato : contatos.entrySet()) {
+      if (contato.getKey().equalsIgnoreCase(name)) {
+        this.contatos.remove(contato.getKey());
         return true;
       }
     }
@@ -58,9 +87,9 @@ public class Agenda {
   }
 
   public boolean rmFone(String name, int id) {
-    for (int i = 0; i < contatos.size(); i++) {
-      if (contatos.get(i).getName().equalsIgnoreCase(name)) {
-        this.contatos.get(i).removeFone(id);
+    for (Map.Entry<String, Contato> contato : contatos.entrySet()) {
+      if (contato.getKey().equalsIgnoreCase(name)) {
+        this.contatos.get(contato.getKey()).removeFone(id);
         return true;
       }
     }
@@ -68,24 +97,21 @@ public class Agenda {
     return false;
   }
 
-  public Agenda() {
-    this.contatos = new ArrayList<>();
-  }
+  public Map<String, Contato> search(String pattern) {
+    pattern = pattern.toLowerCase();
+    Map<String, Contato> searchContato = new TreeMap<>();
 
-  public List<Contato> search(String pattern) {
-    List<Contato> searchContato = new ArrayList<>();
-
-    for (Contato contato : contatos) {
+    for (Map.Entry<String, Contato> contato : contatos.entrySet()) {
       boolean founded = false;
-      if (contato.getName().contains(pattern))
+      if (contato.getKey().contains(pattern))
         founded = true;
-      for (Fone fone : contato.getFones()) {
+      for (Fone fone : contato.getValue().getFones()) {
         if (fone.getLabel().contains(pattern) || fone.getNumber().contains(pattern))
           founded = true;
       }
 
       if (founded) {
-        searchContato.add(contato);
+        searchContato.put(contato.getKey(), contato.getValue());
       }
     }
 
