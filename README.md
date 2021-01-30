@@ -13,3 +13,4 @@
 - [Projeto 09](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2009) ### (Projeto [@016 Favoritos](https://github.com/qxcodepoo/arcade/tree/master/base/016))
 - [Projeto 10](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2010) ### (Projeto [@028 Bilheteria](https://github.com/qxcodepoo/arcade/blob/master/base/028))
 - [Projeto 11](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2011) ### (Projeto [@030 ContatoStar](https://github.com/qxcodepoo/arcade/tree/master/base/030))
+- [Projeto 12](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2012) ### (Projeto [@025 Twitter - Associação reflexiva](https://github.com/qxcodepoo/arcade/blob/master/base/025))
