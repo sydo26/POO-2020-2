@@ -10,5 +10,5 @@
 - [Projeto 06](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2006) ### (Um canhão que atira pro nada)
 - [Projeto 07](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2007) ### (Projeto [@012 Topic](https://github.com/qxcodepoo/arcade/tree/master/base/012))
 - [Projeto 08](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2008) ### (Projeto [@015 Busca](https://github.com/qxcodepoo/arcade/tree/master/base/015))
-- [Projeto 09](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2009) ### (Projeto [@016 Busca](https://github.com/qxcodepoo/arcade/tree/master/base/016))
+- [Projeto 09](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2009) ### (Projeto [@016 Favoritos](https://github.com/qxcodepoo/arcade/tree/master/base/016))
 - [Projeto 10](https://github.com/sydo26/POO-2020-2/tree/main/Projeto%2010) ### (Projeto [@028 Bilheteria](https://github.com/qxcodepoo/arcade/blob/master/base/028))
