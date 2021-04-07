@@ -34,38 +34,38 @@ public class Starter {
   public void executeCases() throws ExceptionControl {
     String cmd = getCommand().replace(PREFIX, "").toLowerCase();
     switch (cmd) {
-      case "end":
-        setExit(true);
-        break;
-      case "vender":
-        sell();
-        break;
-      case "addpessoa":
-        addPeople();
-        break;
-      case "addevento":
-        addEvent();
-        break;
-      case "addsetor":
-        addSector();
-        break;
-      case "showp":
-        showPeoples();
-        break;
-      case "showe":
-        showEvents();
-        break;
-      case "shows":
-        showSectors();
-        break;
-      case "showc":
-        showMoney();
-        break;
-      case "showv":
-        showSales();
-        break;
-      default:
-        throw new ExceptionControl("comando [" + cmd + "] inexistente!");
+    case "end":
+      setExit(true);
+      break;
+    case "vender":
+      sell();
+      break;
+    case "addpessoa":
+      addPeople();
+      break;
+    case "addevento":
+      addEvent();
+      break;
+    case "addsetor":
+      addSector();
+      break;
+    case "showp":
+      showPeoples();
+      break;
+    case "showe":
+      showEvents();
+      break;
+    case "shows":
+      showSectors();
+      break;
+    case "showc":
+      showMoney();
+      break;
+    case "showv":
+      showSales();
+      break;
+    default:
+      throw new ExceptionControl("comando [" + cmd + "] inexistente!");
     }
   }
 
